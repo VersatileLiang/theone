@@ -2,7 +2,7 @@
 Scenario.name = tor
 Scenario.simulateConnections = [true]
 Scenario.updateInterval = [0.1]
-Scenario.endTime = [21610]
+Scenario.endTime = [0.1]
 
 #############################
 #Communication Configuration#
@@ -14,9 +14,9 @@ btInterface.transmitRange = [30]
 
 Scenario.nrofHostGroups = [2]
 
-Group.movementModel = [ShortestPathMapBasedMovement]
-%Group.router = [AaRRouter;DGRRouter;TBHGRRouter;TORRouter;AaRRouter;TBRRouter;DGRRouter]
-Group.router = [TORRouter]
+Group.movementModel = [MyMovement]
+%Group.router = [AaRRouter;DGRRouter;TBHGRRouter;MyRouter;AaRRouter;TBRRouter;DGRRouter]
+Group.router = [MyRouter]
 Group.bufferSize =[1000M]
 Group.waitTime = [0,0]
 
@@ -98,6 +98,6 @@ ProphetRouter.secondsInTimeUnit = [10]
 GeoSprayRouter.nrofCopies= [10]
 GSaRRouter.nrofCopies = [10]
 EDGSRouter.nrofCopies = [10]
-TORRouter.AdvancedMobilityPoint = [4]
-TORRouter.BuildTrajectoryType = [0]
+MyRouter.AdvancedMobilityPoint = [4]
+MyRouter.BuildTrajectoryType = [0]
 
