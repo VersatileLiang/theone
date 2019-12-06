@@ -1,0 +1,20 @@
+Message stats for scenario tor
+sim_time: 2110.8000
+created: 70
+started: 452
+relayed: 338
+aborted: 113
+dropped: 0
+removed: 94
+delivered: 14
+delivery_prob: 0.2000
+response_prob: 0.0000
+overhead_ratio: 23.1429
+latency_avg: 525.5929
+latency_med: 482.8000
+hopcount_avg: 2.5000
+hopcount_med: 2
+buffertime_avg: 305.7457
+buffertime_med: 221.1000
+rtt_avg: NaN
+rtt_med: NaN

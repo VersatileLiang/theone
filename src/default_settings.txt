@@ -1,0 +1,103 @@
+## Scenario settings
+Scenario.name = tor
+Scenario.simulateConnections = [true]
+Scenario.updateInterval = [0.1]
+Scenario.endTime = [21610]
+
+#############################
+#Communication Configuration#
+#############################
+btInterface.type = [SimpleBroadcastInterface]
+btInterface.transmitSpeed = [563k]
+btInterface.transmitRange = [30]
+
+
+Scenario.nrofHostGroups = [2]
+
+Group.movementModel = [ShortestPathMapBasedMovement]
+%Group.router = [AaRRouter;DGRRouter;TBHGRRouter;TORRouter;AaRRouter;TBRRouter;DGRRouter]
+Group.router = [TORRouter]
+Group.bufferSize =[1000M]
+Group.waitTime = [0,0]
+
+
+Group.nrofInterfaces = [1]
+Group.interface1 = [btInterface]
+
+Group.speed = [8.33,13.89]
+Group.msgTtl = [60]
+Group.nrofHosts = [100]
+
+
+######################################
+##Queue Model Configuration - <FIFO>##
+######################################
+Group.sendQueue = [2]
+
+Group1.groupID = p
+Group2.groupID = d
+
+Group2.nodeLocation=2192,1201
+Group2.movementModel = CSPlacementMovement
+Group2.speed =0,0
+Group2.nrofHosts =1
+
+
+######################
+##Message Generation##
+######################
+Events.nrof = [1]
+Events1.class = [MessageEventGenerator]
+Events1.size = [1M]
+Events1.interval = [30]
+Events1.hosts = [0,99]
+Events1.tohosts = [100,100]
+Events1.prefix = [M]
+Events1.time = [0,16200]
+
+
+############################
+###Mobility Configuration###
+############################
+MovementModel.rngSeed = [1]
+MovementModel.worldSize = [4500,3400]
+MovementModel.warmup = [0]
+
+MapBasedMovement.nrofMapFiles = 2
+MapBasedMovement.mapFile1 = data/roads.wkt
+MapBasedMovement.mapFile2 = data/main_roads.wkt
+
+PointsOfInterest.poiFile1 = data/ParkPOIs.wkt
+PointsOfInterest.poiFile2 = data/CentralPOIs.wkt
+PointsOfInterest.poiFile3 = data/WestPOIs.wkt
+PointsOfInterest.poiFile4 = data/shops.wkt
+
+
+######################
+####Report Setting####
+######################
+Report.nrofReports = 1
+Report.warmup = 0
+Report.reportDir = reports/
+Report.report1 = MessageStatsReport
+
+
+
+###########################
+####Energy Configuration###
+###########################
+Group.intialEnergy = [3600000]
+Group.transmitEnergy = [0]
+
+
+
+###########################
+####Router Configuration###
+###########################
+ProphetRouter.secondsInTimeUnit = [10]
+GeoSprayRouter.nrofCopies= [10]
+GSaRRouter.nrofCopies = [10]
+EDGSRouter.nrofCopies = [10]
+TORRouter.AdvancedMobilityPoint = [4]
+TORRouter.BuildTrajectoryType = [0]
+

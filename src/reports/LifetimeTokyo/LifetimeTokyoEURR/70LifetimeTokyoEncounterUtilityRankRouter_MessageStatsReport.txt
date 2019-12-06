@@ -1,0 +1,20 @@
+Message stats for scenario 70LifetimeTokyoEncounterUtilityRankRouter
+sim_time: 43200.1000
+created: 1440
+started: 16187
+relayed: 14412
+aborted: 1774
+dropped: 133
+removed: 13929
+delivered: 1400
+delivery_prob: 0.9722
+response_prob: 0.0000
+overhead_ratio: 9.2943
+latency_avg: 1065.8702
+latency_med: 906.4000
+hopcount_avg: 2.3450
+hopcount_med: 2
+buffertime_avg: 921.5138
+buffertime_med: 809.7000
+rtt_avg: NaN
+rtt_med: NaN

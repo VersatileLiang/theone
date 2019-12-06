@@ -1,0 +1,37 @@
+Message stats for scenario 5IntervalEpidemicRouter
+sim_time: 43200.1000
+created: 8640
+
+started: 768010
+
+relayed: 747913
+
+aborted: 20091
+
+dropped: 749652
+
+removed: 0
+
+delivered: 3029
+
+delivery_prob: 0.3506
+
+response_prob: 0.0000
+
+overhead_ratio: 245.9175
+
+latency_avg: 1053.6918
+
+latency_med: 855.1000
+
+hopcount_avg: 6.3509
+
+hopcount_med: 5
+
+buffertime_avg: 219.8835
+
+buffertime_med: 160.4000
+
+rtt_avg: NaN
+
+rtt_med: NaN

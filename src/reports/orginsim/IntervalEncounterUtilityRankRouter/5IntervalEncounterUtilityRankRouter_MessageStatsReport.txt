@@ -1,0 +1,37 @@
+Message stats for scenario 5IntervalEncounterUtilityRankRouter
+sim_time: 43200.1000
+created: 8640
+
+started: 89537
+
+relayed: 89169
+
+aborted: 366
+
+dropped: 874
+
+removed: 86471
+
+delivered: 8410
+
+delivery_prob: 0.9734
+
+response_prob: 0.0000
+
+overhead_ratio: 9.6027
+
+latency_avg: 1067.3040
+
+latency_med: 882.9000
+
+hopcount_avg: 2.4287
+
+hopcount_med: 2
+
+buffertime_avg: 1014.1760
+
+buffertime_med: 901.7000
+
+rtt_avg: NaN
+
+rtt_med: NaN

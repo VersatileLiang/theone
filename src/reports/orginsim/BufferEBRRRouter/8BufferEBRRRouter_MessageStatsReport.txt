@@ -1,0 +1,37 @@
+Message stats for scenario 8BufferEBRRRouter
+sim_time: 43200.1000
+created: 1440
+
+started: 18905
+
+relayed: 18826
+
+aborted: 79
+
+dropped: 937
+
+removed: 17422
+
+delivered: 1374
+
+delivery_prob: 0.9542
+
+response_prob: 0.0000
+
+overhead_ratio: 12.7016
+
+latency_avg: 1254.3853
+
+latency_med: 1018.1000
+
+hopcount_avg: 2.4418
+
+hopcount_med: 2
+
+buffertime_avg: 842.7366
+
+buffertime_med: 683.9000
+
+rtt_avg: NaN
+
+rtt_med: NaN

@@ -1,0 +1,36 @@
+Message stats for scenario 50LifetimeEpidemicRouter
+sim_time: 43200.1000
+created: 1440
+
+started: 684356
+
+relayed: 666709
+
+aborted: 17643
+
+dropped: 663303
+
+removed: 0
+
+delivered: 1093
+
+delivery_prob: 0.7590
+
+response_prob: 0.0000
+
+overhead_ratio: 608.9808
+
+latency_avg: 823.5141
+
+latency_med: 776.9000
+hopcount_avg: 6.2845
+
+hopcount_med: 6
+
+buffertime_avg: 238.1409
+
+buffertime_med: 179.2000
+
+rtt_avg: NaN
+
+rtt_med: NaN

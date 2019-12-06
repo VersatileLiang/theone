@@ -1,0 +1,20 @@
+Message stats for scenario 110NodesEncounterUtilityRouter
+sim_time: 43200.1000
+created: 1440
+started: 15721
+relayed: 14623
+aborted: 1098
+dropped: 41
+removed: 14232
+delivered: 1397
+delivery_prob: 0.9701
+response_prob: 0.0000
+overhead_ratio: 9.4674
+latency_avg: 1115.1013
+latency_med: 925.1000
+hopcount_avg: 2.4073
+hopcount_med: 2
+buffertime_avg: 1029.6223
+buffertime_med: 889.9000
+rtt_avg: NaN
+rtt_med: NaN

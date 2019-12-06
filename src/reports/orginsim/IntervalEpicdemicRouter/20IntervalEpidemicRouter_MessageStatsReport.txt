@@ -1,0 +1,37 @@
+Message stats for scenario 20IntervalEpidemicRouter
+sim_time: 43200.1000
+created: 2160
+
+started: 740434
+
+relayed: 720560
+
+aborted: 19870
+
+dropped: 717915
+
+removed: 0
+
+delivered: 1062
+
+delivery_prob: 0.4917
+
+response_prob: 0.0000
+
+overhead_ratio: 677.4934
+
+latency_avg: 961.3098
+
+latency_med: 816.7000
+
+hopcount_avg: 6.2844
+
+hopcount_med: 5
+
+buffertime_avg: 225.6165
+
+buffertime_med: 164.9000
+
+rtt_avg: NaN
+
+rtt_med: NaN

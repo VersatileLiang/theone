@@ -1,0 +1,37 @@
+Message stats for scenario 16BufferEBSRouter
+sim_time: 43200.1000
+created: 1440
+
+started: 10524
+
+relayed: 10491
+
+aborted: 33
+
+dropped: 148
+
+removed: 10150
+
+delivered: 1371
+
+delivery_prob: 0.9521
+
+response_prob: 0.0000
+
+overhead_ratio: 6.6521
+
+latency_avg: 1410.3611
+
+latency_med: 1136.7000
+
+hopcount_avg: 2.4865
+
+hopcount_med: 2
+
+buffertime_avg: 1023.3990
+
+buffertime_med: 762.6000
+
+rtt_avg: NaN
+
+rtt_med: NaN

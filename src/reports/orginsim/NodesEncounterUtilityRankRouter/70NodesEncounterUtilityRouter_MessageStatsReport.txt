@@ -1,0 +1,20 @@
+Message stats for scenario 70NodesEncounterUtilityRouter
+sim_time: 43200.1000
+created: 1440
+started: 14765
+relayed: 13355
+aborted: 1409
+dropped: 142
+removed: 12852
+delivered: 1384
+delivery_prob: 0.9611
+response_prob: 0.0000
+overhead_ratio: 8.6496
+latency_avg: 1275.7289
+latency_med: 1062.4000
+hopcount_avg: 2.3338
+hopcount_med: 2
+buffertime_avg: 1147.9028
+buffertime_med: 1013.5000
+rtt_avg: NaN
+rtt_med: NaN

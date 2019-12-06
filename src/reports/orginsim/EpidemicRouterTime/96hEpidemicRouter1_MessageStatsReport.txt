@@ -1,0 +1,37 @@
+Message stats for scenario 96hEpidemicRouter1
+sim_time: 345600.1000
+created: 11713
+
+started: 600319
+
+relayed: 378678
+
+aborted: 221637
+
+dropped: 386653
+
+removed: 0
+
+delivered: 2369
+
+delivery_prob: 0.2023
+
+response_prob: 0.0000
+
+overhead_ratio: 158.8472
+
+latency_avg: 4947.8731
+
+latency_med: 3237.7000
+
+hopcount_avg: 5.1963
+
+hopcount_med: 3
+
+buffertime_avg: 1188.7540
+
+buffertime_med: 746.7000
+
+rtt_avg: NaN
+
+rtt_med: NaN

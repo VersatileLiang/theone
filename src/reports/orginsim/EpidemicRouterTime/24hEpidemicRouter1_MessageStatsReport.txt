@@ -1,0 +1,37 @@
+Message stats for scenario 24hEpidemicRouter1
+sim_time: 86400.0000
+created: 2925
+
+started: 141413
+
+relayed: 86194
+
+aborted: 55219
+
+dropped: 87181
+
+removed: 0
+
+delivered: 605
+
+delivery_prob: 0.2068
+
+response_prob: 0.0000
+
+overhead_ratio: 141.4694
+l
+atency_avg: 4650.6643
+
+latency_med: 3002.5000
+
+hopcount_avg: 4.8347
+
+hopcount_med: 3
+
+buffertime_avg: 1208.9984
+
+buffertime_med: 758.8000
+
+rtt_avg: NaN
+
+rtt_med: NaN

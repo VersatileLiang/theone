@@ -1,0 +1,37 @@
+Message stats for scenario DirectDeliveryRouter1
+sim_time: 43200.1000
+生成消息个数created: 1463 
+
+开始消息个数started: 1401
+
+延迟的消息个数relayed: 518
+
+中止传输的消息个数aborted: 883
+
+丢弃的消息个数dropped: 727
+
+拆掉的消息个数removed: 0
+
+交付的消息个数delivered: 518
+
+交付率delivery_prob: 0.3541
+
+有反馈的消息交付率response_prob: 0.0000
+
+开销率(开销率=(延迟的消息个数-成功传输的消息个数)/交付消息的个数)overhead_ratio: 0.0000
+l
+平均延迟latency_avg: 8472.8631
+l
+中位数延迟latency_med: 6916.2000
+
+平均跳数hopcount_avg: 1.0000
+
+中继节点个数hopcount_med: 1
+
+节点缓存消息的平均时间buffertime_avg: 17240.5382
+
+节点缓存消息时间的中位数buffertime_med: 16410.0000
+
+平均往返时延往rtt_avg: NaN
+返时延的中位数
+rtt_med: NaN

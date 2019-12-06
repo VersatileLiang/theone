@@ -1,0 +1,20 @@
+Message stats for scenario 8BufferMSFRouter1
+sim_time: 43200.1000
+created: 1440
+started: 12418
+relayed: 12407
+aborted: 11
+dropped: 11847
+removed: 0
+delivered: 1293
+delivery_prob: 0.8979
+response_prob: 0.0000
+overhead_ratio: 8.5955
+latency_avg: 1072.4398
+latency_med: 943.4000
+hopcount_avg: 1.7912
+hopcount_med: 2
+buffertime_avg: 2386.6032
+buffertime_med: 2024.6000
+rtt_avg: NaN
+rtt_med: NaN
