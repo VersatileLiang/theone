@@ -1,0 +1,20 @@
+Message stats for scenario EnergyAware-cahe10
+sim_time: 43200.1000
+created: 1728
+started: 25753
+relayed: 18782
+aborted: 6887
+dropped: 19405
+removed: 0
+delivered: 224
+delivery_prob: 0.1296
+response_prob: 0.0000
+overhead_ratio: 82.8482
+latency_avg: 1160.6817
+latency_med: 894.3000
+hopcount_avg: 3.6518
+hopcount_med: 3
+buffertime_avg: 1272.4057
+buffertime_med: 463.5000
+rtt_avg: NaN
+rtt_med: NaN

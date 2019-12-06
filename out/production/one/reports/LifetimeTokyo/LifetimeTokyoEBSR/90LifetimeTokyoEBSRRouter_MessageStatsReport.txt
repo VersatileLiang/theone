@@ -1,0 +1,20 @@
+Message stats for scenario 90LifetimeTokyoEBSRRouter
+sim_time: 43200.1000
+created: 1440
+started: 9764
+relayed: 8943
+aborted: 821
+dropped: 140
+removed: 8606
+delivered: 1368
+delivery_prob: 0.9500
+response_prob: 0.0000
+overhead_ratio: 5.5373
+latency_avg: 1453.4868
+latency_med: 1203.4000
+hopcount_avg: 2.3026
+hopcount_med: 2
+buffertime_avg: 1077.2049
+buffertime_med: 800.6000
+rtt_avg: NaN
+rtt_med: NaN

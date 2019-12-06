@@ -1,0 +1,20 @@
+Message stats for scenario 130NodesEBRRouter
+sim_time: 43200.1000
+created: 1440
+started: 10148
+relayed: 9802
+aborted: 346
+dropped: 8689
+removed: 0
+delivered: 1396
+delivery_prob: 0.9694
+response_prob: 0.0000
+overhead_ratio: 6.0215
+latency_avg: 1239.1453
+latency_med: 1019.5000
+hopcount_avg: 1.7844
+hopcount_med: 2
+buffertime_avg: 4930.1395
+buffertime_med: 5120.4000
+rtt_avg: NaN
+rtt_med: NaN

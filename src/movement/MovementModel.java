@@ -288,7 +288,7 @@ public abstract class MovementModel {
 		}
 	}
 
-	public List<Coord> getTRApath(Coord fromlocation, Coord deslocation) 
+	public List<Coord> getTORpath(Coord fromlocation, Coord deslocation)
 	{
 		return null;
 	}	

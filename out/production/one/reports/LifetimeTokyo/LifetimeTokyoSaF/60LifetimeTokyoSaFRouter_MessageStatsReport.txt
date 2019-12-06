@@ -1,0 +1,20 @@
+Message stats for scenario 60LifetimeTokyoSaFRouter
+sim_time: 43200.1000
+created: 1440
+started: 10661
+relayed: 9780
+aborted: 880
+dropped: 9046
+removed: 0
+delivered: 1388
+delivery_prob: 0.9639
+response_prob: 0.0000
+overhead_ratio: 6.0461
+latency_avg: 951.3838
+latency_med: 792.3000
+hopcount_avg: 2.4099
+hopcount_med: 2
+buffertime_avg: 3375.9478
+buffertime_med: 3426.1000
+rtt_avg: NaN
+rtt_med: NaN

@@ -1,0 +1,36 @@
+Message stats for scenario 24BufferEBRRRouter
+sim_time: 43200.1000
+created: 1440
+
+started: 18231
+
+relayed: 18171
+
+aborted: 60
+
+dropped: 409
+
+removed: 17206
+
+delivered: 1392
+
+delivery_prob: 0.9667
+
+response_prob: 0.0000
+
+overhead_ratio: 12.0539
+
+latency_avg: 1254.4350
+
+latency_med: 1033.7000
+
+hopcount_avg: 2.3736
+hopcount_med: 2
+
+buffertime_avg: 872.0001
+
+buffertime_med: 689.0000
+
+rtt_avg: NaN
+
+rtt_med: NaN

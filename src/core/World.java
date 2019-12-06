@@ -29,7 +29,7 @@ public class World {
 	public static final String RANDOMIZE_UPDATES_S = "randomizeUpdateOrder";
 	/** should the update order of nodes be randomized -setting's default value
 	 * ({@value}) */
-	public static final boolean DEF_RANDOMIZE_UPDATES = true;
+	public static final boolean DEF_RANDOMIZE_UPDATES = false;
 	
 	/**
 	 * Should the connectivity simulation be stopped after one round 
@@ -47,8 +47,7 @@ public class World {
 	/** list of nodes; nodes are indexed by their network address */
 	private List<DTNHost> hosts;
 	private boolean simulateConnections;
-	/** nodes in the order they should be updated (if the order should be 
-	 * randomized; null value means that the order should not be randomized) */
+	/** nodes in the order they should be updated (if the order should be randomized; null value means that the order should not be randomized) */
 	private ArrayList<DTNHost> updateOrder;
 	/** is cancellation of simulation requested from UI */
 	private boolean isCancelled;
@@ -180,6 +179,12 @@ public class World {
 	 * are made in random order.
 	 */
 	private void updateHosts() {
+        int myHosts[] = new int[hosts.size()];//数量
+        int myHostsNum[] = new int[hosts.size()];//编号
+        double myHostsDoop[][] = new double[hosts.size()+1][hosts.size()+1];//距离
+        int num = 5;
+        int chNum = 10;
+        int doop = 300;
 		if (this.updateOrder == null) { // randomizing is off
 			for (int i=0, n = hosts.size();i < n; i++) {
 				if (this.isCancelled) {
@@ -187,6 +192,60 @@ public class World {
 				}
 				hosts.get(i).update(simulateConnections);
 			}
+            for (int a = 0; a < doop; a++){
+                for (int i = 0; i < hosts.size(); i++){
+                    myHosts[i] = 0;
+                    myHostsNum[i] = i;
+                    for (int j = 0; j < hosts.size(); j++){
+                        myHostsDoop[i][j] = 0;
+                    }
+                }
+                for (int i = 0; i < hosts.size(); i++){
+                    for (int j = i + 1; j < hosts.size(); j++){
+                        //两点间距
+                        double x1 = hosts.get(i).getLocation().getX();
+                        double x2 = hosts.get(j).getLocation().getX();
+                        double y1 = hosts.get(i).getLocation().getY();
+                        double y2 = hosts.get(j).getLocation().getY();
+                        myHostsDoop[i][j] = Math.sqrt(Math.pow((x1-x2),2) + Math.pow((y1-y2),2));
+                        if (myHostsDoop[i][j] < doop){
+                            myHosts[i]++;
+                        }
+                    }
+                }
+                for (int i = 0; i < hosts.size(); i++){
+                    for (int j = i + 1; j < hosts.size(); j++){
+                        if(myHosts[i] < myHosts[j]){
+                            //从大到小
+                            int t = myHosts[j];
+                            int te= myHostsNum[j];
+                            myHosts[j] = myHosts[i];
+                            myHostsNum[j] = myHostsNum[i];
+                            myHosts[i] = t;
+                            myHostsNum[i] = te;
+                        }
+                    }
+                }
+
+                int hostsNum = 0;
+                for (int i = 0; i < hosts.size(); i++){
+                    if (num <= myHosts[i]){
+                        hostsNum++;
+                    }
+                }
+                if (hostsNum >= chNum){
+                    //节点过多处理
+                    doop = doop - num;
+                    //num++;
+                }else {
+                    break;
+                }
+            }
+			for (int i = 0; num <= myHosts[i]; i++){
+			    System.out.println(hosts.get(myHostsNum[i]).getName());
+			    // TODO 添加节点
+            }
+			System.out.println("---------------------------------");
 		}
 		else { // update order randomizing is on
 			assert this.updateOrder.size() == this.hosts.size() : 
@@ -198,7 +257,7 @@ public class World {
 					break;
 				}
 				this.updateOrder.get(i).update(simulateConnections);
-			}			
+			}
 		}
 		
 		if (simulateConOnce && simulateConnections) {

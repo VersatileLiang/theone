@@ -1,0 +1,20 @@
+Message stats for scenario 20BufferTokyoEBSRRouter
+sim_time: 43200.1000
+created: 1440
+started: 9777
+relayed: 8949
+aborted: 828
+dropped: 123
+removed: 8627
+delivered: 1370
+delivery_prob: 0.9514
+response_prob: 0.0000
+overhead_ratio: 5.5321
+latency_avg: 1443.1931
+latency_med: 1197.5000
+hopcount_avg: 2.2766
+hopcount_med: 2
+buffertime_avg: 1060.9608
+buffertime_med: 796.2000
+rtt_avg: NaN
+rtt_med: NaN

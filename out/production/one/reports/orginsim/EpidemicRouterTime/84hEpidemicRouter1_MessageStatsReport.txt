@@ -1,0 +1,37 @@
+Message stats for scenario 84hEpidemicRouter1
+sim_time: 302400.0000
+created: 10250
+
+started: 525454
+
+relayed: 331183
+
+aborted: 194267
+
+dropped: 338016
+
+removed: 0
+
+delivered: 2068
+
+delivery_prob: 0.2018
+
+response_prob: 0.0000
+
+overhead_ratio: 159.1465
+
+latency_avg: 4916.6771
+
+latency_med: 3244.800
+
+hopcount_avg: 5.1900
+
+hopcount_med: 3
+
+buffertime_avg: 1185.0530
+
+buffertime_med: 742.0000
+
+rtt_avg: NaN
+
+rtt_med: NaN

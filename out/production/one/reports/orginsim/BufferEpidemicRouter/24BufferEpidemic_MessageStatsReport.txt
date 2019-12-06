@@ -1,0 +1,37 @@
+Message stats for scenario 24BufferEpidemic
+sim_time: 43200.1000
+created: 1440
+
+started: 588783
+
+relayed: 57448
+1
+aborted: 14298
+
+dropped: 573050
+
+removed: 0
+
+delivered: 613
+
+delivery_prob: 0.4257
+
+response_prob: 0.0000
+
+overhead_ratio: 936.1631
+
+latency_avg: 943.0801
+
+latency_med: 815.6000
+
+hopcount_avg: 7.7276
+
+hopcount_med: 6
+
+buffertime_avg: 170.6523
+
+buffertime_med: 115.4000
+
+rtt_avg: NaN
+
+rtt_med: NaN

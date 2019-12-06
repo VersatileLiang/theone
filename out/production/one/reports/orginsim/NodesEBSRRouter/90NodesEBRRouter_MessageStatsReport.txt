@@ -1,0 +1,20 @@
+Message stats for scenario 90NodesEBRRouter
+sim_time: 43200.1000
+created: 1440
+started: 22189
+relayed: 19597
+aborted: 2590
+dropped: 385
+removed: 18689
+delivered: 1380
+delivery_prob: 0.9583
+response_prob: 0.0000
+overhead_ratio: 13.2007
+latency_avg: 1446.0354
+latency_med: 1193.6000
+hopcount_avg: 2.3841
+hopcount_med: 2
+buffertime_avg: 899.4658
+buffertime_med: 691.7000
+rtt_avg: NaN
+rtt_med: NaN

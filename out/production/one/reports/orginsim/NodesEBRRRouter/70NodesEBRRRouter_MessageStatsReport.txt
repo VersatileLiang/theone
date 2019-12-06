@@ -1,0 +1,20 @@
+Message stats for scenario 70NodesEBRRRouter
+sim_time: 43200.1000
+created: 1440
+started: 20625
+relayed: 17745
+aborted: 2878
+dropped: 622
+removed: 16448
+delivered: 1377
+delivery_prob: 0.9563
+response_prob: 0.0000
+overhead_ratio: 11.8867
+latency_avg: 1530.1269
+latency_med: 1271.1000
+hopcount_avg: 2.3805
+hopcount_med: 2
+buffertime_avg: 974.5570
+buffertime_med: 763.6000
+rtt_avg: NaN
+rtt_med: NaN

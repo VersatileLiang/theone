@@ -4,7 +4,7 @@
  */
 package routing;
 
-import java.util.ArrayList;//��������
+import java.util.ArrayList;//????????
 import java.util.Collection;//
 import java.util.Collections;
 import java.util.List;
@@ -185,7 +185,7 @@ public abstract class ActiveRouter extends MessageRouter {
 		int retVal;
 		
 		if (!con.isReadyForTransfer()) {
-			return TRY_LATER_BUSY;//��TRY_LATER_BUSY=1ʱ��˵����������æ���Ժ����ԣ�
+			return TRY_LATER_BUSY;//??TRY_LATER_BUSY=1?????????????????????????
 		}
 		
 		if (!policy.acceptSending(getHost(), 
@@ -194,7 +194,7 @@ public abstract class ActiveRouter extends MessageRouter {
 		}
 		
 		retVal = con.startTransfer(getHost(), m);
-		if (retVal == RCV_OK) { // started transfer//RCV_OK=0��ʼ����
+		if (retVal == RCV_OK) { // started transfer//RCV_OK=0???????
 			addToSendingConnections(con);
 			m.incrementForwardingCounter();
 		}
@@ -213,10 +213,10 @@ public abstract class ActiveRouter extends MessageRouter {
 	 * @return True if router can start transfer, false if not
 	 */
 	protected boolean canStartTransfer() {
-		if (this.getNrofMessages() == 0) { //��������
+		if (this.getNrofMessages() == 0) { //????????
 			return false;
 		}
-		if (this.getConnections().size() == 0) {//û�����ӽ�������û���ھӽڵ�
+		if (this.getConnections().size() == 0) {//??????????????????????
 			return false;
 		}
 		
@@ -356,17 +356,17 @@ public abstract class ActiveRouter extends MessageRouter {
 	 * @return a list of message-connections tuples
 	 */
 	protected List<Tuple<Message, Connection>> getMessagesForConnected() {
-		if (getNrofMessages() == 0 || getConnections().size() == 0) {//�����ǰ�ڵ����û����Ϣ���߸���û�п��õ����ӣ����ص���һ����List,������NULL
+		if (getNrofMessages() == 0 || getConnections().size() == 0) {//???????????????????????????��?????????????????????List,??????NULL
 			/* no messages -> empty list */
 			return new ArrayList<Tuple<Message, Connection>>(0); 
 		}
 
-		List<Tuple<Message, Connection>> forTuples = //���ڴ洢��ʱ��Ԫ��
+		List<Tuple<Message, Connection>> forTuples = //?????????????
 			new ArrayList<Tuple<Message, Connection>>();
-		for (Message m : getMessageCollection()) {//�������е�Message
-			for (Connection con : getConnections()) {//�������е�Connection
-				DTNHost to = con.getOtherNode(getHost());//��ȡConnection����һ��//����ÿ���ھӽڵ�	
-				if (m.getTo() == to) {//��Ϣm�Ƿ���con����һ��
+		for (Message m : getMessageCollection()) {//???????��?Message
+			for (Connection con : getConnections()) {//???????��?Connection
+				DTNHost to = con.getOtherNode(getHost());//???Connection???????//????????????	
+				if (m.getTo() == to) {//???m?????con???????
 					forTuples.add(new Tuple<Message, Connection>(m,con));
 				}
 			}
@@ -389,11 +389,11 @@ public abstract class ActiveRouter extends MessageRouter {
 			return null;
 		}
 		
-		for (Tuple<Message, Connection> t : tuples) {//�������е�Ԫ��
-			Message m = t.getKey();//��ȡ����Ϣm
-			Connection con = t.getValue();//��ȡ������con
-			if (startTransfer(m, con) == RCV_OK) {//����Ϣm��con�Ϸ���
-				return t;//�����Ϣ���ͳɹ���ֱ������tryMessageForConnected
+		for (Tuple<Message, Connection> t : tuples) {//???????��????
+			Message m = t.getKey();//????????m
+			Connection con = t.getValue();//?????????con
+			if (startTransfer(m, con) == RCV_OK) {//?????m??con?????
+				return t;//?????????????????????tryMessageForConnected
 			}
 		}
 		return null;
@@ -408,14 +408,14 @@ public abstract class ActiveRouter extends MessageRouter {
 	  * @return The message whose transfer was started or null if no 
 	  * transfer was started. 
 	  */
-	//ֻҪ��һ����Ϣ�ܴ��ݣ��ͷ���
+	//?????????????????????
 	protected Message tryAllMessages(Connection con, List<Message> messages) {
 		for (Message m : messages) {
 			int retVal = startTransfer(m, con); 
 			if (retVal == RCV_OK) {
 				return m;	// accepted a message, don't try others
 			}
-			else if (retVal > 0) { //ϵͳ���壬ֻ��TRY_LATER_BUSY����0����Ϊ1
+			else if (retVal > 0) { //?????��???TRY_LATER_BUSY????0?????1
 				return null; // should try later -> don't bother trying others
 			}
 		}
@@ -434,7 +434,7 @@ public abstract class ActiveRouter extends MessageRouter {
 	 * @return The connections that started a transfer or null if no connection
 	 * accepted a message.
 	 */
-	//tryAllMessages(con, messages); ֻҪ��һ����Ϣ�ܴ��ݣ��ͷ���
+	//tryAllMessages(con, messages); ?????????????????????
 	protected Connection tryMessagesToConnections(List<Message> messages,
 			List<Connection> connections) {
 		for (int i=0, n=connections.size(); i<n; i++) {
@@ -457,14 +457,14 @@ public abstract class ActiveRouter extends MessageRouter {
 	 * accepted a message.
 	 */
 	protected Connection tryAllMessagesToAllConnections(){
-		List<Connection> connections = getConnections();//ȡ�������ھӽڵ�
+		List<Connection> connections = getConnections();//????????????
 		if (connections.size() == 0 || this.getNrofMessages() == 0) {
 			return null;
 		}
 
 		List<Message> messages = 
-			new ArrayList<Message>(this.getMessageCollection());//ȡ�û�����������Ϣ
-		this.sortByQueueMode(messages);//�����е���Ϣ��������
+			new ArrayList<Message>(this.getMessageCollection());//???????????????
+		this.sortByQueueMode(messages);//?????��????????????
 
 		return tryMessagesToConnections(messages, connections);
 	}
@@ -478,29 +478,29 @@ public abstract class ActiveRouter extends MessageRouter {
 	 * was started
 	 */
 	/*
-	 * �����е�����getMessagesForConnected()�������䷵��ֵ��һ��List���������Ԫ���ʽΪ����ЩԪ���ж�����������
-	 * ��1��Message�ǵ�ǰ�ڵ㻺���е���Ϣ����2��Connection�ǵ�ǰ�ڵ�ά����UP���ӣ���3��Message��Ŀ�Ľڵ����Connection����һ�ˡ�
-	 * exchangeDeliverableMessages���ڽ����ýڵ����ھӽڵ�����Ϣ����Щ��Ϣ��Ŀ�Ľڵ��Ǹýڵ�������ھӽڵ㡣
-	 * ֵ��ע����ǣ��ýڵ���ܻ��ж���ھӽڵ�(The ONE��ʾΪ���connection)��
-	 * ��ֻ����һ��connection�������ݣ����������ŵ������ԣ�ֻ����һ����Ϣ�ܴ��䵽Ŀ�Ľڵ㣬�ͷ��ء�
-	 * exchangeDeliverableMessages�ȿ����ڵ��Ƿ�����Ϣ��ĳ���ھӽڵ㣬
-	 * ���û�У��ٲ鿴�ھӽڵ��Ƿ�����Ϣ��Ŀ�Ľڵ��Ǳ��ڵ㡣
+	 * ?????��?????getMessagesForConnected()????????????????List???????????????????��????��???????????
+	 * ??1??Message??????????��????????2??Connection????????????UP???????3??Message??????????Connection????????
+	 * exchangeDeliverableMessages???????????????????????????��?????????????????????????
+	 * ???????????????????��???????(The ONE???????connection)??
+	 * ??????????connection??????????????????????????????????????????????????????
+	 * exchangeDeliverableMessages??????????????????????????
+	 * ?????��??????????????????????????????
 	 */
 	protected Connection exchangeDeliverableMessages() {
-		List<Connection> connections = getConnections();//�õ���������
+		List<Connection> connections = getConnections();//???????????
 
-		if (connections.size() == 0) { //û�����ӣ�����Ϊ��
+		if (connections.size() == 0) { //???????????????
 			return null;
 		}
 		
 		@SuppressWarnings(value = "unchecked")
 		Tuple<Message, Connection> t =
-			tryMessagesForConnected(sortByQueueMode(getMessagesForConnected()));//�Ƚ��ȳ�
+			tryMessagesForConnected(sortByQueueMode(getMessagesForConnected()));//??????
 
 		if (t != null) {
 			return t.getValue(); // started transfer
 		}
-		//���û���ͳɹ������ھӽڵ�Ļ������Ƿ�����Ϣ��Ŀ�Ľڵ��Ǹýڵ㣬���ǣ����Դ���
+		//?????????????????????????????????????????????????????????
 		// didn't start transfer to any node -> ask messages from connected
 		for (Connection con : connections) {
 			if (con.getOtherNode(getHost()).requestDeliverableMessages(con)) {
@@ -542,19 +542,19 @@ public abstract class ActiveRouter extends MessageRouter {
 	 * @return true if this router is transferring something
 	 */
 	public boolean isTransferring() {
-		 //����1�����ڵ����ڴ���
+		 //????1??????????????
 		if (this.sendingConnections.size() > 0) {
 			return true; // sending something
 		}
 		
 		List<Connection> connections = getConnections();
 		
-		//����2��û���ھӽڵ�
+		//????2??????????
 		if (connections.size() == 0) {
 			return false; // not connected
 		}
 		
-		//����3�����ھӽڵ㣬������·���ڴ���
+		//????3???????????????????????
 		for (int i=0, n=connections.size(); i<n; i++) {
 			Connection con = connections.get(i);
 			if (!con.isReadyForTransfer()) {
@@ -565,8 +565,8 @@ public abstract class ActiveRouter extends MessageRouter {
 		return false;		
 	}
 	/*
-	 * ֵ��ע����ǣ�ֻ�е����ھ�������������·���ǿ��еģ����ܴ��䣬������Ϊ���ߵĴ�������ǹ㲥�ġ�����ÿ�δ���ֻ����һ��connection���д��䣬
-	 * �ɼ�The ONE�����������ŵ���������û���յ�����㲥����
+	 * ????????????��?????????????????????????��???????????????????????????????????????��???????????connection???��???
+	 * ???The ONE????????????????????????????????????
 	 * */
 	
 	/**
@@ -612,17 +612,17 @@ public abstract class ActiveRouter extends MessageRouter {
 	 * @see #addToSendingConnections(Connection)
 	 */
 	@Override
-	/*��������ɴ�������ݰ�������ɲο����ġ�The ONEʹ�ñʼǣ�����Դ�������Ϣ���չ��̡�
-	��ֹ��Щ�Ͽ���·�ϵ����ݰ�
-	��Ҫʱ��ɾ����Щ������յ��Ҳ����ڴ������Ϣ
-	������ЩTTL���ڵ����ݰ�(ֻ��û����Ϣ���͵����)������ɲο����ġ�The ONEʹ�ñʼǣ���Ϣ����ʱ��TTL��������
-	��������ģ�壬���˻�δ�漰���ݲ�չ������
+	/*?????????????????????????��??????The ONE???????????????????????????
+	?????��??????????????
+	???????????��??????????????????????
+	??????��TTL??????????(?????????????????)???????��??????The ONE????????????????TTL????????
+	??????????��?????��??????????????
 	 * (non-Javadoc)
 	 * @see routing.MessageRouter#update()
 	 */
 	
 	public void update() {		
-		super.update(); //����MessageRouter��update()
+		super.update(); //????MessageRouter??update()
 		
 		/* in theory we can have multiple sending connections even though
 		  currently all routers allow only one concurrent sending connection */
@@ -630,17 +630,17 @@ public abstract class ActiveRouter extends MessageRouter {
 			boolean removeCurrent = false;
 			Connection con = sendingConnections.get(i);
 			
-			/*** 1. ��������ɴ�������ݰ� ***/
+			/*** 1. ?????????????????? ***/
 			/* finalize ready transfers */
-			if (con.isMessageTransferred()) {//��Ϣ�Ƿ�����ϣ����Ƿ����(1.0*m.getSize())/this.speedû
+			if (con.isMessageTransferred()) {//????????????????????(1.0*m.getSize())/this.speed?
 				if (con.getMessage() != null) {
-					transferDone(con); //���·��Ͷ�
-					con.finalizeTransfer(); //���½��ն�
+					transferDone(con); //????????
+					con.finalizeTransfer(); //????????
 				} /* else: some other entity aborted transfer */
 				removeCurrent = true;
 			}
 			
-			/*** 2. ��ֹ��Щ�Ͽ���·�ϵ����ݰ� ***/
+			/*** 2. ?????��?????????????? ***/
 			/* remove connections that have gone down */
 			else if (!con.isUp()) {
 				if (con.getMessage() != null) {
@@ -649,11 +649,11 @@ public abstract class ActiveRouter extends MessageRouter {
 				}
 				removeCurrent = true;
 			} 
-			/*** 3. ��Ҫʱ��ɾ����Щ������յ��Ҳ����ڴ������Ϣ ***/
+			/*** 3. ???????????��?????????????????????? ***/
 			if (removeCurrent) {
 				// if the message being sent was holding excess buffer, free it
 				if (this.getFreeBufferSize() < 0) {
-					this.makeRoomForMessage(0); //��Ҫʱ��ɾ����Щ������յ��Ҳ����ڴ������Ϣ
+					this.makeRoomForMessage(0); //???????????��??????????????????????
 				}
 				sendingConnections.remove(i);
 			}
@@ -663,7 +663,7 @@ public abstract class ActiveRouter extends MessageRouter {
 			}
 		}
 		
-		/*** 4. ������ЩTTL���ڵ����ݰ�(ֻ��û����Ϣ���͵����) ***/
+		/*** 4. ??????��TTL??????????(?????????????????) ***/
 		/* time to do a TTL check and drop old messages? Only if not sending */
 		if (SimClock.getTime() - lastTtlCheck >= ttlCheckInterval && 
 				sendingConnections.size() == 0) {
@@ -671,7 +671,7 @@ public abstract class ActiveRouter extends MessageRouter {
 			lastTtlCheck = SimClock.getTime();
 		}
 		
-		 /*** 5. ��������ģ�� ***/
+		 /*** 5. ??????????? ***/
 		if (energy != null) {
 			/* TODO: add support for other interfaces */
 			NetworkInterface iface = getHost().getInterface(1);

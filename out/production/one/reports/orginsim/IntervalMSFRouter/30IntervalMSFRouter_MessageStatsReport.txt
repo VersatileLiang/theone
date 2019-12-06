@@ -1,0 +1,37 @@
+Message stats for scenario 30IntervalMSFRouter
+sim_time: 43200.1000
+created: 1440
+
+started: 9742
+
+relayed: 9730
+
+aborted: 12
+
+dropped: 8670
+
+removed: 0
+
+delivered: 1391
+
+delivery_prob: 0.9660
+
+response_prob: 0.0000
+
+overhead_ratio: 5.9950
+
+latency_avg: 1337.6330
+
+latency_med: 1077.8000
+
+hopcount_avg: 1.7944
+
+hopcount_med: 2
+
+buffertime_avg: 4873.1549
+
+buffertime_med: 5079.0000
+
+rtt_avg: NaN
+
+rtt_med: NaN

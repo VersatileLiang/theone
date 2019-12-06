@@ -1,0 +1,37 @@
+Message stats for scenario 10IntervalEBRRRouter
+sim_time: 43200.1000
+created: 4320
+
+started: 54779
+
+relayed: 54550
+
+aborted: 228
+
+dropped: 1029
+
+removed: 52413
+
+delivered: 4186
+
+delivery_prob: 0.9690
+
+response_prob: 0.0000
+
+overhead_ratio: 12.0315
+
+latency_avg: 1272.1006
+
+latency_med: 1049.7000
+
+hopcount_avg: 2.4035
+
+hopcount_med: 2
+
+buffertime_avg: 875.0706
+
+buffertime_med: 699.4000
+
+rtt_avg: NaN
+
+rtt_med: NaN

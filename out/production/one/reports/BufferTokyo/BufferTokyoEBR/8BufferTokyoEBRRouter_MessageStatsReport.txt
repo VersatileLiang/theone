@@ -1,0 +1,20 @@
+Message stats for scenario 8BufferTokyoEBRRouter
+sim_time: 43200.1000
+created: 1440
+started: 9348
+relayed: 8675
+aborted: 673
+dropped: 8342
+removed: 0
+delivered: 1262
+delivery_prob: 0.8764
+response_prob: 0.0000
+overhead_ratio: 5.8740
+latency_avg: 1141.2199
+latency_med: 982.9000
+hopcount_avg: 1.7544
+hopcount_med: 2
+buffertime_avg: 2409.7760
+buffertime_med: 2049.0000
+rtt_avg: NaN
+rtt_med: NaN

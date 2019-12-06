@@ -17,8 +17,7 @@ import movement.map.SimMap;
 import routing.MessageRouter;
 
 /**
- * A simulation scenario used for getting and storing the settings of a
- * simulation run.
+ * A simulation scenario used for getting and storing the settings of a simulation run.
  */
 public class SimScenario implements Serializable {
 	

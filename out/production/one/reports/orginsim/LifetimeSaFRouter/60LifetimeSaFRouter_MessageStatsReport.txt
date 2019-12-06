@@ -1,0 +1,20 @@
+Message stats for scenario 60LifetimeSaFRouter
+sim_time: 43200.1000
+created: 1440
+started: 9867
+relayed: 9841
+aborted: 26
+dropped: 9101
+removed: 0
+delivered: 1382
+delivery_prob: 0.9597
+response_prob: 0.0000
+overhead_ratio: 6.1208
+latency_avg: 954.1479
+latency_med: 779.6000
+hopcount_avg: 2.4689
+hopcount_med: 3
+buffertime_avg: 3424.2712
+buffertime_med: 3473.3000
+rtt_avg: NaN
+rtt_med: NaN

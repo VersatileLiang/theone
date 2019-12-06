@@ -66,7 +66,7 @@ public class ShortestPathMapBasedMovement extends MapBasedMovement implements
 		
 		return p;
 	}	
-	public List<Coord> getTRApath(Coord fromlocation, Coord deslocation) 
+	public List<Coord> getTORpath(Coord fromlocation, Coord deslocation)
 	{
 		List<Coord> trajactory = new ArrayList<Coord>();
 		

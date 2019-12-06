@@ -1,0 +1,20 @@
+Message stats for scenario 40BufferEncounterUtilityRankRouter6
+sim_time: 43200.1000
+created: 1440
+started: 16183
+relayed: 16106
+aborted: 77
+dropped: 0
+removed: 15836
+delivered: 1407
+delivery_prob: 0.9771
+response_prob: 0.0000
+overhead_ratio: 10.4471
+latency_avg: 874.8016
+latency_med: 721.7000
+hopcount_avg: 2.4684
+hopcount_med: 2
+buffertime_avg: 795.0177
+buffertime_med: 696.5000
+rtt_avg: NaN
+rtt_med: NaN

@@ -1,47 +1,36 @@
 package routing;
-import java.util.ArrayList;
 
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.Random;
-import java.util.Set;
-import java.util.Map.Entry;
-
+import core.*;
 import movement.Path;
 import movement.map.MapNode;
 import util.Tuple;
-import core.*;
+
+import java.util.*;
 
 public class TORRouter extends ActiveRouter
-{   
+{
 	private Set<String> ackedMessageIds;
 	public int ReferencePoint;
 	public int BuildTrajectoryType;
-	
+
 	public Coord TRAStartPoint=null;
 	public boolean TrajectoryAssociation = false;
-	
+
 	public static final String POINT = "AdvancedMobilityPoint";
 	public static final String TYPE = "BuildTrajectoryType";
 	public static final String TORRouter_NS = "TORRouter";
 	private static final double VariationX = -1;
 	private static final double VariationY = -1;
 
-	public TORRouter(Settings s) 
+	public TORRouter(Settings s)
 	{
 		super(s);
 		Settings VDFSettings = new Settings (TORRouter_NS);
 		ReferencePoint = VDFSettings.getInt(POINT);
 		BuildTrajectoryType = VDFSettings.getInt(TYPE);
 	}
-	
-	protected TORRouter(TORRouter r) 
+
+	protected TORRouter(TORRouter r)
 	{
 		super(r);
 		this.ackedMessageIds = new HashSet<String>();
@@ -66,11 +55,10 @@ public class TORRouter extends ActiveRouter
 		msg.Delete=-1;
 		
 		/*Build the Trajectory Path*/
-		if(this.getHost().movement.toString().contains("ShortestPathMapBasedMovement"))			
-		{
+		if(this.getHost().movement.toString().contains("ShortestPathMapBasedMovement"))
+        {
 			/****0 = Shortest Path****/
-			if(this.BuildTrajectoryType==0)
-				getShortestTRA(msg);
+			if(this.BuildTrajectoryType==0) getShortestTRA(msg);
 			
 			/****1 = From the Next Point for Calculation****/
 			else if (this.BuildTrajectoryType==1)
@@ -127,8 +115,8 @@ public class TORRouter extends ActiveRouter
 		Coord Start1=this.findStartingPath().get(0);
 		Coord Start2=this.findStartingPath().get(1);
 			
-		List<Coord> FirstList =this.getHost().movement.getTRApath(Start1, M.getTo().getLocation());
-		List<Coord> SecondList=this.getHost().movement.getTRApath(Start2, M.getTo().getLocation()) ;
+		List<Coord> FirstList =this.getHost().movement.getTORpath(Start1, M.getTo().getLocation());
+		List<Coord> SecondList=this.getHost().movement.getTORpath(Start2, M.getTo().getLocation()) ;
 
 		double FirstValue =this.getHost().getLocation().distance(Start1);	
 		double SecondValue=this.getHost().getLocation().distance(Start2);
@@ -155,7 +143,7 @@ public class TORRouter extends ActiveRouter
 		
 		Coord StartingCoord=this.getHost().getPath().getCoords().get(getStartingPoint()+Input);
 		
-		List<Coord> NewList=this.getHost().movement.getTRApath(StartingCoord.clone(), M.getTo().getLocation().clone()) ;
+		List<Coord> NewList=this.getHost().movement.getTORpath(StartingCoord.clone(), M.getTo().getLocation().clone()) ;
 		
 		for(Coord C: NewList)	
 		{	
@@ -168,7 +156,7 @@ public class TORRouter extends ActiveRouter
 		/****Must Use Clone!!!, As Without It, the Coord is Realtime for Mobile Node****/
 		M.msgTRA.add(this.getHost().getLocation().clone());
 		
-		List<Coord> NewList=this.getHost().movement.getTRApath(this.getHost().destination.clone(), M.getTo().getLocation().clone()) ;
+		List<Coord> NewList=this.getHost().movement.getTORpath(this.getHost().destination.clone(), M.getTo().getLocation().clone()) ;
 		
 		for(Coord C: NewList)
 		{
@@ -919,9 +907,9 @@ public class TORRouter extends ActiveRouter
 	}
   
 	@Override
-	public TORRouter replicate()     
+	public TORRouter replicate()
 	{
-		   return new TORRouter(this); 
+		   return new TORRouter(this);
 	}
 
 	public double getTrajectoryProximity(double DesX, double DesY)

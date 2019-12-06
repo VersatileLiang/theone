@@ -1,0 +1,37 @@
+Message stats for scenario 60LifetimeMSFRouter
+sim_time: 43200.1000
+created: 1440
+
+started: 9616
+
+relayed: 9605
+
+aborted: 11
+
+dropped: 9017
+
+removed: 0
+
+delivered: 1330
+
+delivery_prob: 0.9236
+
+response_prob: 0.0000
+
+overhead_ratio: 6.2218
+
+latency_avg: 1209.8383
+
+latency_med: 1020.1000
+
+hopcount_avg: 1.7895
+
+hopcount_med: 2
+
+buffertime_avg: 3099.5988
+
+buffertime_med: 3283.1000
+
+rtt_avg: NaN
+
+rtt_med: NaN

@@ -88,8 +88,12 @@ public class DTNHost implements Comparable<DTNHost> {
 			}
 		}
 	}
-	
-	/**
+
+    public String getName() {
+        return name;
+    }
+
+    /**
 	 * Returns a new network interface address and increments the address for
 	 * subsequent calls.
 	 * @return The next address.
@@ -362,6 +366,13 @@ public class DTNHost implements Comparable<DTNHost> {
 		}
 	}
 
+    /**
+     * Get next location
+     */
+    public double getNextTimeToMove(){
+        return this.nextTimeToMove;
+    }
+
 	/**
 	 * Moves the node towards the next waypoint or waits if it is
 	 * not time to move yet
@@ -507,15 +518,7 @@ public class DTNHost implements Comparable<DTNHost> {
 		this.router.deleteMessage(id, drop);
 	}
 
-	/**
-	 * Returns a string presentation of the host.
-	 * @return Host's name
-	 */
-	public String toString() {
-		return name;
-	}
-
-	/**
+    /**
 	 * Checks if a host is the same as this host by comparing the object
 	 * reference
 	 * @param otherHost The other host
@@ -533,7 +536,17 @@ public class DTNHost implements Comparable<DTNHost> {
 		return this.getAddress() - h.getAddress();
 	}
 
-	 public double getBuffer(){
+    /**
+     * Returns a string presentation of the host.
+     *
+     * @return Host's name
+     */
+    @Override
+    public String toString() {
+        return this.name;
+    }
+
+    public double getBuffer(){
 	    	double buf=router.getFreeBufferSize();
 	    	return buf;
 	    }

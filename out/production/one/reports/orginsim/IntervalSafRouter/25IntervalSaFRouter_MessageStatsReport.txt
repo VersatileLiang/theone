@@ -1,0 +1,37 @@
+Message stats for scenario 25IntervalSaFRouter
+sim_time: 43200.1000
+created: 1728
+
+started: 11816
+
+relayed: 11787
+
+aborted: 29
+
+dropped: 10422
+
+removed: 0
+
+delivered: 1685
+
+delivery_prob: 0.9751
+
+response_prob: 0.0000
+
+overhead_ratio: 5.9953
+
+latency_avg: 1048.4013
+
+latency_med: 827.1000
+
+hopcount_avg: 2.4599
+
+hopcount_med: 3
+
+buffertime_avg: 5205.8266
+
+buffertime_med: 5253.7000
+
+rtt_avg: NaN
+
+rtt_med: NaN

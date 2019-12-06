@@ -1,0 +1,37 @@
+Message stats for scenario 60hEpidemicRouter1
+sim_time: 216000.0000
+created: 7319
+
+started: 370910
+
+relayed: 232025
+
+aborted: 138881
+
+dropped: 236507
+
+removed: 0
+
+delivered: 1488
+
+delivery_prob: 0.2033
+
+response_prob: 0.0000
+
+overhead_ratio: 154.9308
+
+latency_avg: 4943.2830
+
+latency_med: 3245.3000
+
+hopcount_avg: 5.1552
+
+hopcount_med: 3
+
+buffertime_avg: 1196.3107
+
+buffertime_med: 752.9000
+
+rtt_avg: NaN
+
+rtt_med: NaN

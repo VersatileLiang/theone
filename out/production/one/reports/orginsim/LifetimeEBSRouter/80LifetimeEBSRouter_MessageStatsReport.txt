@@ -1,0 +1,37 @@
+Message stats for scenario 80LifetimeEBSRouter
+sim_time: 43200.1000
+created: 1440
+
+started: 11216
+
+relayed: 11182
+
+aborted: 34
+
+dropped: 220
+
+removed: 10760
+
+delivered: 1367
+
+delivery_prob: 0.9493
+
+response_prob: 0.0000
+
+overhead_ratio: 7.1800
+
+latency_avg: 1364.9765
+
+latency_med: 1131.9000
+
+hopcount_avg: 2.5216
+
+hopcount_med: 2
+
+buffertime_avg: 970.9843
+
+buffertime_med: 721.8000
+
+rtt_avg: NaN
+
+rtt_med: NaN

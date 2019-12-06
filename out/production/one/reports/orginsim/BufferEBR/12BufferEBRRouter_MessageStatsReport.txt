@@ -1,0 +1,20 @@
+Message stats for scenario 12BufferEBRRouter
+sim_time: 43200.1000
+created: 1440
+started: 9643
+relayed: 9019
+aborted: 624
+dropped: 8443
+removed: 0
+delivered: 1299
+delivery_prob: 0.9021
+response_prob: 0.0000
+overhead_ratio: 5.9430
+latency_avg: 1367.1907
+latency_med: 1158.9000
+hopcount_avg: 1.7652
+hopcount_med: 2
+buffertime_avg: 3209.5042
+buffertime_med: 3088.4000
+rtt_avg: NaN
+rtt_med: NaN

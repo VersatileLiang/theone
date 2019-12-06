@@ -437,6 +437,7 @@ public class Settings {
 	 * @param name Name of the setting
 	 * @return the setting name appended to namespace name(s) on a String 
 	 */
+
 	private String getPropertyNamesString(String name) {
 		if (this.secondaryNamespace != null) {
 			return "'"+ this.secondaryNamespace + "." + name + "' nor '" + 
